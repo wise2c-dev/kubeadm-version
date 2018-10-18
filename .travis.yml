@@ -8,4 +8,4 @@ script:
 - docker build -t wisecloud/kubeadm-version:$TRAVIS_BRANCH .
 - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - docker push wisecloud/kubeadm-version:$TRAVIS_BRANCH
-- docker run --rm --name=kubeadm-version wisecloud/kubeadm-version:$TRAVIS_BRANCH kubeadm config images list --kubernetes-version 1.11.1
+- docker run --rm --name=kubeadm-version wisecloud/kubeadm-version:$TRAVIS_BRANCH kubeadm config images list --kubernetes-version 1.11.3
