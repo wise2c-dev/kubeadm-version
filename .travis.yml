@@ -11,4 +11,4 @@ script:
 - docker build --build-arg KUBERNETES_VERSION=${VERSION:1} -t wisecloud/kubeadm-version:$VERSION .
 - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - docker push wisecloud/kubeadm-version:$VERSION
-- docker run --rm --name=kubeadm-version wisecloud/kubeadm-version:$VERSION kubeadm config images list --kubernetes-version ${VERSION:1} --feature-gates=CoreDNS=false
+- docker run --rm --name=kubeadm-version wisecloud/kubeadm-version:$VERSION kubeadm config images list --kubernetes-version ${VERSION:1}
