@@ -4,10 +4,10 @@ services:
 - docker
 
 before_install:
-- apt-get update
-- apt-get install pip curl
-- pip install -upgrade pip
-- pip install yq
+- sudo apt-get update
+- sudo apt-get install pip curl
+- sudo pip install -upgrade pip
+- sudo pip install yq
 
 script:
 - >
