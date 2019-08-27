@@ -5,9 +5,10 @@ services:
 
 before_install:
 - sudo apt-get update
-- sudo apt-get install python-pip3 curl
-- sudo pip3 install --upgrade pip3
-- sudo pip3 install yq
+- sudo apt-get install python-pip curl
+- sudo pip install --upgrade pip
+- sudo -H pip install --ignore-installed PyYAML
+- sudo pip install yq
 
 script:
 - >
