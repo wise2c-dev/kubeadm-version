@@ -17,3 +17,4 @@ script:
 - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 - docker push wisecloud/kubeadm-version:${KUBE_VERSION}
 - docker run --rm --name=kubeadm-version wisecloud/kubeadm-version:${KUBE_VERSION} kubeadm config images list --kubernetes-version ${KUBE_VERSION:1}
+- docker run --rm --name=kubeadm-version wisecloud/kubeadm-version:${KUBE_VERSION} kubeadm config images list --kubernetes-version ${KUBE_VERSION:1} --config=kube-dns.yaml
